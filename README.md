@@ -1,3 +1,3 @@
 # MyFigure
 
-MyFigure is a cart project store theme with figure products
+MyFigure is a store cart theme for action figure products

@@ -1,3 +1,5 @@
+import { scrollTo } from "./helpers";
+
 // Variables
 const cartBtn = document.querySelector('.cart-btn');
 const closeCartBtn = document.querySelector('.close-cart');
@@ -41,17 +43,7 @@ const UI = {
         UI.updateGridProducts();
     },
     displayProducts(product) {
-        // let result = '';
         product.map(({ title, img, id, price }) => {
-            /* result += `<div class="product" data-product-id=${id}>
-            <div class="img-container">
-                <span class='qty-display'>0</span>
-                <img src="${img}" alt="product" class="product-img">
-                <button class="bag-btn" data-id="${id}"><i class="fas fa-shopping-cart"></i>Add Cart</button>
-            </div>
-            <h3 class='title'>${title}</h3>
-            <h4>$ <span class='price'>${price.toFixed(2)}</span></h4></div>`; */
-
             let productDiv = document.createElement('div');
             productDiv.classList.add('product');
             productDiv.setAttribute('data-product-id', id);
@@ -66,14 +58,13 @@ const UI = {
 
             productsDOM.appendChild(productDiv);
         });
-        // productsDOM.innerHTML = result;
     },
     updateGridProducts() {
         let productItemIds = document.querySelectorAll(`[data-product-id]`);
         Array.from(productItemIds).forEach(productItem => {
             let itemId = productItem.getAttribute('data-product-id');
             let filteredItem = Storages.getCart().filter(item => item.id === itemId);
-            let itemLength = filteredItem > 0 ? item[0].qty : 0;
+            let itemLength = filteredItem.length > 0 ? filteredItem[0].qty : 0;
 
             let product = document.querySelector(`[data-product-id='${itemId}'] .img-container`);
             product.setAttribute('data-qty', itemLength);
@@ -158,9 +149,9 @@ const UI = {
                 <span class="remove-item" data-id="${id}">remover</span>
             </div>
             <div>
-                <i class="fas fa-chevron-up" data-id="${id}"></i>
+                <i class="arrow-btn fas fa-chevron-up" data-id="${id}"></i>
                 <p class="item-amount price-item-${id}">${qty}</p>
-                <i class="fas fa-chevron-down" data-id="${id}"></i>
+                <i class="arrow-btn fas fa-chevron-down" data-id="${id}"></i>
             </div>
             </div>`;
 
@@ -306,3 +297,5 @@ document.addEventListener('DOMContentLoaded', () => {
             ui.cartLogic();
         });
 });
+
+document.querySelector('.buy-now').addEventListener('click', () => scrollTo('.products'));

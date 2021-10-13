@@ -1,6 +1,6 @@
 
 const mix = require('laravel-mix');
-// require('laravel-mix-polyfill');
+require('laravel-mix-polyfill');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,8 +18,8 @@ mix.options({
 })
   .js('./app/src/js/app.js', './app/public/js/app.js')
   .sass('./app/src/css/app.scss', './app/public/css/app.css', [])
-  // .polyfill({
-  //   enabled: true,
-  //   useBuiltIns: "usage",
-  //   targets: "firefox 50, IE 11"
-  // });
+  .polyfill({
+    enabled: true,
+    useBuiltIns: "usage",
+    targets: "firefox 50, IE 11"
+  });
