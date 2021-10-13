@@ -11,7 +11,6 @@ const productsDOM = document.querySelector('.products-center');
 
 // Cart
 let cart = [];
-let buttonsDOM = [];
 
 // Getting products
 function Products() {
@@ -60,7 +59,7 @@ const UI = {
             productDiv.innerHTML = `
                 <div class="img-container">
                     <img src="${img}" alt="product" class="product-img">
-                    <button class="bag-btn" data-id="${id}"><i class="fas fa-shopping-cart"></i>Add Cart</button>
+                    <button class="bag-btn" data-id="${id}"><i class="fas fa-shopping-cart"></i><span class='button-text'>Add Cart</span></button>
                 </div>
                 <h3 class='title'>${title}</h3>
                 <h4>$ <span class='price'>${price.toFixed(2)}</span></h4>`;
@@ -72,32 +71,26 @@ const UI = {
     updateGridProducts() {
         let productItemIds = document.querySelectorAll(`[data-product-id]`);
         Array.from(productItemIds).forEach(productItem => {
-            let productItemId = productItem.getAttribute('data-product-id');
-            let item = Storages.getCart().filter(item => item.id === productItemId);
-            let itemLength = item.length > 0 ? item[0].qty : 0;
-            let product = document.querySelector(`[data-product-id='${productItemId}'] .img-container`);
+            let itemId = productItem.getAttribute('data-product-id');
+            let filteredItem = Storages.getCart().filter(item => item.id === itemId);
+            let itemLength = filteredItem > 0 ? item[0].qty : 0;
+
+            let product = document.querySelector(`[data-product-id='${itemId}'] .img-container`);
             product.setAttribute('data-qty', itemLength);
+
+            let buttonText = document.querySelector(`[data-product-id='${itemId}'] .button-text`);
+            buttonText.innerHTML = filteredItem.length > 0 ? 'Adicionar Mais' : 'Add Cart';;
         });
     },
     getBagButtons() {
-        let storageItems = Storages.getCart();
-        this.updateGridProducts();
+        UI.updateGridProducts();
 
-        const buttons = Array.from(document.querySelectorAll('.bag-btn'));
+        let productItemIds = Array.from(document.querySelectorAll(`[data-product-id]`));
 
-        buttonsDOM = buttons;
+        productItemIds.map(product => {
+            let id = product.dataset.productId;
 
-        buttons.map(button => {
-            let id = button.dataset.id;
-
-            if (storageItems) {
-                let inCart = storageItems.find(item => item.id === id);
-                if (inCart) button.innerText = 'Adicionar Mais';
-                // button.disabled = true;
-            }
-
-            button.addEventListener('click', e => {
-                e.target.innerText = 'Adicionar Mais';
+            product.addEventListener('click', e => {
                 // e.target.disabled = true;
                 let product = document.querySelector(`[data-product-id="${id}"]`);
                 let img = document.querySelector(`[data-product-id="${id}"] img`).src;
@@ -107,9 +100,12 @@ const UI = {
                 Storages.saveProducts({ id, img, title, price });
 
                 // Search for product qty
-                let qty = Storages.getCart().find(item => item.id == id).qty;
+                let qty = Storages.getCart()
+                    .find(item => item.id == id).qty;
 
-                let inCartProduct = Storages.getCart().find(item => item.id == id).qty;
+                let inCartProduct = Storages.getCart()
+                    .find(item => item.id == id).qty;
+
                 // Add to cart
                 if (inCartProduct === 1) {
                     UI.addCartItem({ id, img, title, price, qty });
@@ -200,7 +196,7 @@ const UI = {
 
                 cartContent.removeChild(removeItem.parentElement.parentElement.parentElement);
 
-                this.removeCartItem(id);
+                UI.removeCartItem(id);
             }
 
             if (e.target.classList.contains('fa-chevron-up')) {
@@ -249,9 +245,8 @@ const UI = {
         let cartItemsId = Storages.getCart().map(item => item.id);
         cartItemsId.map(id => UI.removeCartItem(id));
 
-        while (cartContent.children.length > 0) {
+        while (cartContent.children.length > 0)
             cartContent.removeChild(cartContent.children[0]);
-        }
 
         UI.updateUI();
     },
@@ -259,13 +254,7 @@ const UI = {
         cart = Storages.getCart().filter(item => item.id !== id);
         UI.setTotalCart();
         Storages.saveToStorage(cart);
-        let button = UI.getSingleButton(id);
-        button.disabled = false;
-        button.innerHTML = '<i class="fas fa-shopping-cart"></i>Add Cart';
     },
-    getSingleButton(id) {
-        return buttonsDOM.find(button => button.dataset.id === id);
-    }
 }
 
 // Local Storage
@@ -290,9 +279,7 @@ const Storages = {
 
         if (idProductAlreadyExists) {
             storageItems.map(item => {
-                if (item.id == product.id) {
-                    item.qty++;
-                }
+                if (item.id == product.id) item.qty++;
             });
         }
 
