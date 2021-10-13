@@ -287,7 +287,7 @@ body {
   padding: 1.5rem;
   transform: translateX(100%);
   z-index: 99;
-  transition: 0.2s ease-in-out;
+  transition: 0.35s ease-in-out;
 }
 
 /* Hide scrollbar */
