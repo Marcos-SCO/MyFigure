@@ -331,11 +331,17 @@ body {
 
 /*---------- Cart Item -------------------- */
 .cart-item {
-  display: grid;
+  // display: grid;
+  // grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
-  grid-template-columns: auto 1fr auto;
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
+  width: 100%;
+
+  .price-display {
+    min-width: 180px;
+  }
 }
 
 .cart-item img {
