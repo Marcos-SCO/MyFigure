@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+.logo {
+  font-family: 'Press Start 2P', cursive;
+  color: $primaryColor;
+  a {
+    text-decoration: none;
+    color: $primaryColor;
+  }
+}
+
 body {
   color: $mainBlack;
   background: $mainWhite;

@@ -1,8 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.logo {
+  font-family: "Press Start 2P", cursive;
+  color: #f09d51;
+}
+.logo a {
+  text-decoration: none;
+  color: #f09d51;
 }
 
 body {
