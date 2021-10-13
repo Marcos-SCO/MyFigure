@@ -182,10 +182,10 @@ body {
   transition: all 0.3s linear;
   transform: translateX(101%);
   cursor: pointer;
+  color: #fff;
 }
 
-.img-container:hover .bag-btn,
-.bag-btn:hover {
+.img-container:hover {
   color: #fff;
 }
 
@@ -269,16 +269,16 @@ body {
   visibility: hidden;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 100%;
   height: 100%;
   overflow: scroll;
   z-index: 3;
   background: #e7e2dd;
   padding: 1.5rem;
-  transition: 0.2s ease-in-out;
   transform: translateX(100%);
   z-index: 99;
+  transition: 0.2s ease-in-out;
 }
 
 /* Hide scrollbar */
@@ -291,6 +291,7 @@ body {
 .showCart {
   visibility: visible;
   opacity: 1;
+  right: 0;
   transform: translateX(0);
 }
 

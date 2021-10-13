@@ -187,10 +187,10 @@ body {
   transition: $mainTransition;
   transform: translateX(101%);
   cursor: pointer;
+  color: $mainWhite
 }
 
-.img-container:hover .bag-btn,
-.bag-btn:hover {
+.img-container:hover {
   color: $mainWhite;
 }
 
@@ -274,16 +274,16 @@ body {
   visibility: hidden;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 100%;
   height: 100%;
   overflow: scroll;
   z-index: 3;
   background: rgb(231, 226, 221);
   padding: 1.5rem;
-  transition: $cartTransition;
   transform: translateX(100%);
   z-index: 99;
+  transition: $cartTransition;
 }
 
 /* Hide scrollbar */
@@ -296,6 +296,7 @@ body {
 .showCart {
   visibility: visible;
   opacity: 1;
+  right: 0;
   transform: translateX(0);
 }
 
