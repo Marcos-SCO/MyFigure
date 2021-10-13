@@ -1,3 +1,4 @@
+require('./imports/smoothScrollCompress');
 import { scrollTo } from "./helpers";
 
 // Variables
