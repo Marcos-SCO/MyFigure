@@ -134,9 +134,9 @@ function Products() {
 
 var UI = {
   updateUI: function updateUI() {
-    UI.toggleCartDisplay();
     UI.setTotalCart();
     UI.updateGridProducts();
+    UI.toggleCartDisplay();
   },
   displayProducts: function displayProducts(product) {
     product.map(function (_ref) {
@@ -149,8 +149,7 @@ var UI = {
       productDiv.classList.add('product');
       productDiv.setAttribute('data-product-id', id); // <span class='qty-display'>0</span>
 
-      productDiv.innerHTML = "\n                <div class=\"img-container\">\n                    <img src=\"".concat(img, "\" alt=\"product\" class=\"product-img\">\n                    <button class=\"bag-btn\" data-id=\"").concat(id, "\"><i class=\"fas fa-shopping-cart\"></i><span class='button-text'>Add Cart</span></button>\n                </div>\n                <div class='title-container'><h3 class='title'>").concat(title, "</h3>\n                </div>\n                <h5 class='series'>").concat(series, "</h5>\n                <h4 class='price-container'>R$ <span class='price'>").concat(price.toFixed(2), "</span></h4>"); // <p class='series'>${series}</p>
-
+      productDiv.innerHTML = "\n                <div class=\"img-container\">\n                    <img src=\"".concat(img, "\" alt=\"product\" class=\"product-img\">\n                    <button class=\"bag-btn\" data-id=\"").concat(id, "\"><i class=\"fas fa-shopping-cart\"></i><span class='button-text'>Add Cart</span></button>\n                </div>\n                <div class='title-container'><h3 class='title'>").concat(title, "</h3>\n                </div>\n                <h5 class='series'>").concat(series, "</h5>\n                <h4 class='price-container'>R$ <span class='price'>").concat(price.toFixed(2), "</span></h4>");
       productsDOM.appendChild(productDiv);
     });
   },
@@ -190,11 +189,13 @@ var UI = {
         var qty = Storages.getCart().find(function (item) {
           return item.id == id;
         }).qty;
-        var inCartProduct = Storages.getCart().find(function (item) {
+        var findQtdProduct = Storages.getCart().find(function (item) {
           return item.id == id;
         }).qty; // Add to cart
 
-        if (inCartProduct === 1) {
+        var isProductNotInCart = findQtdProduct === 1;
+
+        if (isProductNotInCart) {
           UI.addCartItem({
             id: id,
             img: img,
@@ -202,21 +203,31 @@ var UI = {
             price: price,
             qty: qty
           });
-        } else {
+        }
+
+        if (!isProductNotInCart) {
           var dataId = document.querySelector(".price-item-".concat(id));
           if (dataId) dataId.innerText = +dataId.textContent + 1;
         }
 
+        UI.updateSingleItemPrices(id);
         UI.updateUI();
+        (0,_helpers__WEBPACK_IMPORTED_MODULE_11__.scrollTo)("[data-cart-id='".concat(id, "']"), {
+          top: '3.8rem',
+          block: "center"
+        });
       });
     });
   },
-  updateSingleItemPrices: function updateSingleItemPrices(cartItemId, currItem) {
+  updateSingleItemPrices: function updateSingleItemPrices(cartItemId) {
+    var currItem = Storages.getCart().find(function (item) {
+      return item.id === cartItemId;
+    });
     var priceDisplay = document.querySelector("[data-cart-id='".concat(cartItemId, "'] .price-display"));
     var priceElement = document.querySelector("[data-cart-id='".concat(cartItemId, "'] .price"));
     var priceQtd = document.querySelector("[data-cart-id='".concat(cartItemId, "'] .price-qty"));
     priceQtd.innerText = currItem.qty;
-    priceElement.innerText = this.multiplySingleItemPrice(currItem.price, currItem.qty);
+    priceElement.innerText = UI.multiplySingleItemPrice(currItem.price, currItem.qty);
   },
   setTotalCart: function setTotalCart() {
     var products = Storages.getCart();
@@ -253,17 +264,18 @@ var UI = {
     cartDOM.classList.toggle('showCart');
   },
   setupApp: function setupApp() {
-    var _this = this;
-
     var cart = Storages.getCart();
-    this.setTotalCart();
-    this.populateCart(cart); // Toggle the cart display
+    UI.setTotalCart();
+    UI.populateCart(cart); // Toggle the cart display
 
     [cartBtn, closeCartBtn, cartOverlay].forEach(function (item) {
-      return item.addEventListener('click', _this.toggleCartDisplay);
+      return item.addEventListener('click', UI.toggleCartDisplay);
+    });
+    cartBtn.addEventListener('click', function () {
+      return (0,_helpers__WEBPACK_IMPORTED_MODULE_11__.scrollTo)('.cart-header');
     });
     cart.forEach(function (cartCurrItem) {
-      return _this.updateSingleItemPrices(cartCurrItem.id, cartCurrItem);
+      return UI.updateSingleItemPrices(cartCurrItem.id);
     });
   },
   populateCart: function populateCart(cart) {
@@ -275,10 +287,8 @@ var UI = {
     return (price * multiplyTo).toFixed(2);
   },
   cartLogic: function cartLogic() {
-    var _this2 = this;
-
     clearCartBtn.addEventListener('click', function () {
-      return _this2.clearCart();
+      return UI.clearCart();
     });
     cartContent.addEventListener('click', function (e) {
       if (e.target.classList.contains('remove-item')) {
@@ -298,7 +308,7 @@ var UI = {
         currUpItem.qty++;
         Storages.saveToStorage(cart);
         addAmount.nextElementSibling.innerText = currUpItem.qty;
-        UI.updateSingleItemPrices(_id, currUpItem);
+        UI.updateSingleItemPrices(_id);
       }
 
       if (e.target.classList.contains('fa-chevron-down')) {
@@ -315,7 +325,7 @@ var UI = {
           currDownItem.qty--;
           Storages.saveToStorage(cart);
           lowerAmount.previousElementSibling.innerText = currDownItem.qty;
-          UI.updateSingleItemPrices(_id2, currDownItem);
+          UI.updateSingleItemPrices(_id2);
         }
 
         if (currDownItem.qty == 0) {
@@ -324,7 +334,7 @@ var UI = {
         }
       }
 
-      if (Storages.getCart() <= 0) _this2.clearCart();
+      if (Storages.getCart() <= 0) UI.clearCart();
       UI.setTotalCart();
       UI.updateGridProducts();
     });
@@ -395,7 +405,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 document.querySelector('.buy-now').addEventListener('click', function () {
-  return (0,_helpers__WEBPACK_IMPORTED_MODULE_11__.scrollTo)('.products');
+  return (0,_helpers__WEBPACK_IMPORTED_MODULE_11__.scrollTo)('.products', {
+    behavior: 'smooth'
+  });
 });
 
 /***/ }),
@@ -413,9 +425,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // Selects the element and activate the scroll behavior with scrollIntoView
 var scrollTo = function scrollTo(element) {
-  return document.querySelector(element).scrollIntoView({
-    behavior: "smooth"
-  });
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  return document.querySelector(element).scrollIntoView(options ? options : false);
 };
 
 /***/ }),

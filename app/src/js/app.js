@@ -38,9 +38,9 @@ function Products() {
 // Display Products
 const UI = {
     updateUI() {
-        UI.toggleCartDisplay();
         UI.setTotalCart();
         UI.updateGridProducts();
+        UI.toggleCartDisplay();
     },
     displayProducts(product) {
         product.map(({ title, series, img, id, price }) => {
@@ -57,8 +57,6 @@ const UI = {
                 </div>
                 <h5 class='series'>${series}</h5>
                 <h4 class='price-container'>R$ <span class='price'>${price.toFixed(2)}</span></h4>`;
-                
-                // <p class='series'>${series}</p>
             productsDOM.appendChild(productDiv);
         });
     },
@@ -97,29 +95,34 @@ const UI = {
                 let qty = Storages.getCart()
                     .find(item => item.id == id).qty;
 
-                let inCartProduct = Storages.getCart()
+                let findQtdProduct = Storages.getCart()
                     .find(item => item.id == id).qty;
 
                 // Add to cart
-                if (inCartProduct === 1) {
+                let isProductNotInCart = findQtdProduct === 1;
+                if (isProductNotInCart) {
                     UI.addCartItem({ id, img, title, price, qty });
-                } else {
+                }
+
+                if (!isProductNotInCart) {
                     let dataId = document.querySelector(`.price-item-${id}`);
                     if (dataId) dataId.innerText = +dataId.textContent + 1;
                 }
 
+                UI.updateSingleItemPrices(id);
                 UI.updateUI();
+                scrollTo(`[data-cart-id='${id}']`, { top: '3.8rem', block: "center", });
             })
 
         });
     },
-    updateSingleItemPrices(cartItemId, currItem) {
+    updateSingleItemPrices(cartItemId) {
+        let currItem = Storages.getCart().find(item => item.id === cartItemId);
         let priceDisplay = document.querySelector(`[data-cart-id='${cartItemId}'] .price-display`);
         let priceElement = document.querySelector(`[data-cart-id='${cartItemId}'] .price`);
         let priceQtd = document.querySelector(`[data-cart-id='${cartItemId}'] .price-qty`);
-
         priceQtd.innerText = currItem.qty;
-        priceElement.innerText = this.multiplySingleItemPrice(currItem.price, currItem.qty)
+        priceElement.innerText = UI.multiplySingleItemPrice(currItem.price, currItem.qty)
     },
     setTotalCart() {
         let products = Storages.getCart();
@@ -166,13 +169,15 @@ const UI = {
     },
     setupApp() {
         let cart = Storages.getCart();
-        this.setTotalCart();
-        this.populateCart(cart);
+        UI.setTotalCart();
+        UI.populateCart(cart);
         // Toggle the cart display
         [cartBtn, closeCartBtn, cartOverlay].forEach(item =>
-            item.addEventListener('click', this.toggleCartDisplay));
+            item.addEventListener('click', UI.toggleCartDisplay));
 
-        cart.forEach(cartCurrItem => this.updateSingleItemPrices(cartCurrItem.id, cartCurrItem));
+        cartBtn.addEventListener('click', () => scrollTo('.cart-header'));
+
+        cart.forEach(cartCurrItem => UI.updateSingleItemPrices(cartCurrItem.id));
     },
     populateCart(cart) {
         cart.map(item => UI.addCartItem(item))
@@ -181,7 +186,7 @@ const UI = {
         return (price * multiplyTo).toFixed(2);
     },
     cartLogic() {
-        clearCartBtn.addEventListener('click', () => this.clearCart());
+        clearCartBtn.addEventListener('click', () => UI.clearCart());
 
         cartContent.addEventListener('click', e => {
             if (e.target.classList.contains('remove-item')) {
@@ -203,7 +208,7 @@ const UI = {
                 Storages.saveToStorage(cart);
 
                 addAmount.nextElementSibling.innerText = currUpItem.qty;
-                UI.updateSingleItemPrices(id, currUpItem);
+                UI.updateSingleItemPrices(id);
             }
 
             if (e.target.classList.contains('fa-chevron-down')) {
@@ -220,7 +225,7 @@ const UI = {
                     currDownItem.qty--;
                     Storages.saveToStorage(cart);
                     lowerAmount.previousElementSibling.innerText = currDownItem.qty;
-                    UI.updateSingleItemPrices(id, currDownItem);
+                    UI.updateSingleItemPrices(id);
                 }
 
                 if (currDownItem.qty == 0) {
@@ -229,7 +234,7 @@ const UI = {
                 }
             }
 
-            if (Storages.getCart() <= 0) this.clearCart();
+            if (Storages.getCart() <= 0) UI.clearCart();
 
             UI.setTotalCart();
             UI.updateGridProducts();
@@ -301,4 +306,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-document.querySelector('.buy-now').addEventListener('click', () => scrollTo('.products'));
+document.querySelector('.buy-now').addEventListener('click', () => scrollTo('.products', { behavior: 'smooth' }));
