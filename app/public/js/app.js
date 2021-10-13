@@ -96,11 +96,13 @@ function Products() {
               products = products.map(function (product) {
                 var _product$fields = product.fields,
                     title = _product$fields.title,
+                    series = _product$fields.series,
                     price = _product$fields.price;
                 var id = product.sys.id;
                 var img = product.fields.img.fields.file.url;
                 return {
                   title: title,
+                  series: series,
                   price: price,
                   id: id,
                   img: img
@@ -139,6 +141,7 @@ var UI = {
   displayProducts: function displayProducts(product) {
     product.map(function (_ref) {
       var title = _ref.title,
+          series = _ref.series,
           img = _ref.img,
           id = _ref.id,
           price = _ref.price;
@@ -146,7 +149,8 @@ var UI = {
       productDiv.classList.add('product');
       productDiv.setAttribute('data-product-id', id); // <span class='qty-display'>0</span>
 
-      productDiv.innerHTML = "\n                <div class=\"img-container\">\n                    <img src=\"".concat(img, "\" alt=\"product\" class=\"product-img\">\n                    <button class=\"bag-btn\" data-id=\"").concat(id, "\"><i class=\"fas fa-shopping-cart\"></i><span class='button-text'>Add Cart</span></button>\n                </div>\n                <h3 class='title'>").concat(title, "</h3>\n                <h4>$ <span class='price'>").concat(price.toFixed(2), "</span></h4>");
+      productDiv.innerHTML = "\n                <div class=\"img-container\">\n                    <img src=\"".concat(img, "\" alt=\"product\" class=\"product-img\">\n                    <button class=\"bag-btn\" data-id=\"").concat(id, "\"><i class=\"fas fa-shopping-cart\"></i><span class='button-text'>Add Cart</span></button>\n                </div>\n                <div class='title-container'><h3 class='title'>").concat(title, "</h3>\n                </div>\n                <h5 class='series'>").concat(series, "</h5>\n                <h4 class='price-container'>R$ <span class='price'>").concat(price.toFixed(2), "</span></h4>"); // <p class='series'>${series}</p>
+
       productsDOM.appendChild(productDiv);
     });
   },
@@ -174,8 +178,8 @@ var UI = {
         // e.target.disabled = true;
         var product = document.querySelector("[data-product-id=\"".concat(id, "\"]"));
         var img = document.querySelector("[data-product-id=\"".concat(id, "\"] img")).src;
-        var title = product.children[1].innerText;
-        var price = product.children[2].children[0].innerText;
+        var title = document.querySelector("[data-product-id=\"".concat(id, "\"] .title")).innerText;
+        var price = document.querySelector("[data-product-id=\"".concat(id, "\"] .price")).innerText;
         Storages.saveProducts({
           id: id,
           img: img,

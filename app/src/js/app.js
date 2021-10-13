@@ -22,11 +22,11 @@ function Products() {
             let data = await result.json();
             let products = data.items;
             products = products.map(product => {
-                const { title, price } = product.fields;
+                const { title, series, price } = product.fields;
                 const { id } = product.sys;
                 const img = product.fields.img.fields.file.url;
 
-                return { title, price, id, img };
+                return { title, series, price, id, img };
             })
             return products;
         } catch (error) {
@@ -43,7 +43,7 @@ const UI = {
         UI.updateGridProducts();
     },
     displayProducts(product) {
-        product.map(({ title, img, id, price }) => {
+        product.map(({ title, series, img, id, price }) => {
             let productDiv = document.createElement('div');
             productDiv.classList.add('product');
             productDiv.setAttribute('data-product-id', id);
@@ -53,9 +53,12 @@ const UI = {
                     <img src="${img}" alt="product" class="product-img">
                     <button class="bag-btn" data-id="${id}"><i class="fas fa-shopping-cart"></i><span class='button-text'>Add Cart</span></button>
                 </div>
-                <h3 class='title'>${title}</h3>
-                <h4>$ <span class='price'>${price.toFixed(2)}</span></h4>`;
-
+                <div class='title-container'><h3 class='title'>${title}</h3>
+                </div>
+                <h5 class='series'>${series}</h5>
+                <h4 class='price-container'>R$ <span class='price'>${price.toFixed(2)}</span></h4>`;
+                
+                // <p class='series'>${series}</p>
             productsDOM.appendChild(productDiv);
         });
     },
@@ -85,8 +88,8 @@ const UI = {
                 // e.target.disabled = true;
                 let product = document.querySelector(`[data-product-id="${id}"]`);
                 let img = document.querySelector(`[data-product-id="${id}"] img`).src;
-                let title = product.children[1].innerText;
-                let price = product.children[2].children[0].innerText;
+                let title = document.querySelector(`[data-product-id="${id}"] .title`).innerText;
+                let price = document.querySelector(`[data-product-id="${id}"] .price`).innerText;
 
                 Storages.saveProducts({ id, img, title, price });
 
