@@ -3,65 +3,199 @@
     {
       "sys": { "id": "1" },
       "fields": {
-        "title": "queen panel bed",
-        "price": 10.99,
-        "img": { "fields": { "file": { "url": "./public/img/product-1.jpeg" } } }
+        "title": "Goku SSJ",
+        "series": "Dragon Ball",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/dragonBallGokuSuperSeyan.png" } } }
       }
     },
     {
       "sys": { "id": "2" },
       "fields": {
-        "title": "king panel bed",
-        "price": 12.99,
-        "img": { "fields": { "file": { "url": "./public/img/product-2.jpeg" } } }
+        "title": "Vegeta",
+        "series": "Dragon Ball",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/dragonBallVegeta.png" } } }
       }
     },
     {
       "sys": { "id": "3" },
       "fields": {
-        "title": "single panel bed",
-        "price": 12.99,
-        "img": { "fields": { "file": { "url": "./public/img/product-3.jpeg" } } }
+        "title": "Majin Boo",
+        "series": "Dragon Ball",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/dragonBallMajinboo.png" } } }
       }
     },
     {
       "sys": { "id": "4" },
       "fields": {
-        "title": "twin panel bed",
-        "price": 22.99,
-        "img": { "fields": { "file": { "url": "./public/img/product-4.jpeg" } } }
+        "title": "Light & Ryuki",
+        "series": "Death Note",
+        "price": 32.99,
+        "img": { "fields": { "file": { "url": "./public/img/deathNoteLightRyuki.png" } } }
       }
     },
     {
       "sys": { "id": "5" },
       "fields": {
-        "title": "fridge",
-        "price": 88.99,
-        "img": { "fields": { "file": { "url": "./public/img/product-5.jpeg" } } }
+        "title": "Dark Magician",
+        "series": "Yu-Gi-Oh!",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/yugiohDarkMagician.png" } } }
       }
     },
     {
       "sys": { "id": "6" },
       "fields": {
-        "title": "dresser",
-        "price": 32.99,
-        "img": { "fields": { "file": { "url": "./public/img/product-6.jpeg" } } }
+        "title": "Yugi Muto",
+        "series": "Yu-Gi-Oh!",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/yugiohYugiMuto.png" } } }
       }
     },
     {
       "sys": { "id": "7" },
       "fields": {
-        "title": "couch",
+        "title": "Monkey D. Ruffy",
+        "series": "One Piece",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/product-7.jpeg" } } }
+        "img": { "fields": { "file": { "url": "./public/img/onePieceMokeyDRuffy.png" } } }
       }
     },
     {
       "sys": { "id": "8" },
       "fields": {
-        "title": "table",
-        "price": 33.99,
-        "img": { "fields": { "file": { "url": "./public/img/product-8.jpeg" } } }
+        "title": "Roronoa Zoro",
+        "series": "One Piece",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/onePieceRoronoaZoro.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "9" },
+      "fields": {
+        "title": "Zero Thumb's Up",
+        "series": "Megaman X",
+        "price": 10.99,
+        "img": { "fields": { "file": { "url": "./public/img/megamanZeroThumbUp.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "10" },
+      "fields": {
+        "title": "Megaman X - Mega Buster",
+        "series": "Megaman X",
+        "price": 12.99,
+        "img": { "fields": { "file": { "url": "./public/img/megamanXMegaBuster.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "11" },
+      "fields": {
+        "title": "Megaman X - Front stand",
+        "series": "Megaman X",
+        "price": 12.99,
+        "img": { "fields": { "file": { "url": "./public/img/megamanXStanding.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "12" },
+      "fields": {
+        "title": "Zero Sword",
+        "series": "Megaman X",
+        "price": 22.99,
+        "img": { "fields": { "file": { "url": "./public/img/megamanZeroSword.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "13" },
+      "fields": {
+        "title": "Ryu - Street Fighter",
+        "series": "Street Fighter",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/streetFighterRyu.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "14" },
+      "fields": {
+        "title": "Raiden",
+        "series": "Mortal Kombat X",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/mortalKombatRaiden.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "15" },
+      "fields": {
+        "title": "Scorpion",
+        "series": "Mortal Kombat X",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/mortalKombatScorpion.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "16" },
+      "fields": {
+        "title": "Sub-Zero",
+        "series": "Mortal Kombat X",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/mortalKombatSubZero.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "17" },
+      "fields": {
+        "title": "Junko Enoshima",
+        "series": "Dangaronpa",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/dangarpaJunkoEnoshima.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "18" },
+      "fields": {
+        "title": "Nagito Komaeda",
+        "series": "Dangaronpa",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/dangaronpaNagitoKomaeda.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "19" },
+      "fields": {
+        "title": "Hajime Hinata",
+        "series": "Dangaronpa",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/dangaronpaHajimeHinata.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "20" },
+      "fields": {
+        "title": "Kioko Kirigiri",
+        "series": "Dangaronpa",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/dangaronpaKiokoKirigiri.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "21" },
+      "fields": {
+        "title": "Kokichi Oma",
+        "series": "Dangaronpa",
+        "price": 45.99,
+        "img": { "fields": { "file": { "url": "./public/img/dangaronpaKokichi.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "22" },
+      "fields": {
+        "title": "Pheonix Wright",
+        "series": "Ace Attorney",
+        "price": 88.99,
+        "img": { "fields": { "file": { "url": "./public/img/aceAttorneyPheonix.png" } } }
       }
     }
   ]
