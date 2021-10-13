@@ -214,11 +214,11 @@ body {
 .product-img {
   display: block;
   transition: $mainTransition;
-  width: 100%;
   min-height: 224px;
   max-height: 224px;
-  max-width: 100%;
-  padding: .5rem;
+  width: 100%;
+  max-width: 153px;
+  padding: 0.5rem;
   object-fit: contain;
 }
 
