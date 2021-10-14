@@ -217,7 +217,8 @@ body {
   min-height: 224px;
   max-height: 224px;
   width: 100%;
-  max-width: 153px;
+  max-width: 100%;
+  // max-width: 153px;
   padding: 0.5rem;
   object-fit: contain;
 }
@@ -414,3 +415,8 @@ body {
 }
 
 /* --------------- End of Cart ---------------- */
+
+
+/* --------------- Swiper - start --------------- */
+@import './libraries/swiper';
+/* --------------- Swiper - end ---------------- */

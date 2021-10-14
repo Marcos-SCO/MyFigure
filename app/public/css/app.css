@@ -209,9 +209,9 @@ body {
 .product-img {
   display: block;
   transition: all 0.3s linear;
-  width: 100%;
   min-height: 224px;
   max-height: 224px;
+  width: 100%;
   max-width: 100%;
   padding: 0.5rem;
   -o-object-fit: contain;
@@ -405,3 +405,29 @@ body {
 }
 
 /* --------------- End of Cart ---------------- */
+/* --------------- Swiper - start --------------- */
+.swiper {
+  width: 600px;
+  height: 300px;
+  width: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-button-next {
+  right: 42px;
+}
+
+.swiper-button-prev {
+  left: 42px;
+}
+
+/* --------------- Swiper - end ---------------- */

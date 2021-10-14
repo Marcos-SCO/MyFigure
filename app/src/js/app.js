@@ -1,4 +1,5 @@
 require('./imports/smoothScrollCompress');
+require('./imports/swiper');
 import { scrollTo } from "./helpers";
 
 // Variables
@@ -307,4 +308,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-document.querySelector('.buy-now').addEventListener('click', () => scrollTo('.products', { behavior: 'smooth' }));
+// document.querySelector('.buy-now').addEventListener('click', () => scrollTo('.products', { behavior: 'smooth' }));
