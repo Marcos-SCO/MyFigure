@@ -2,6 +2,13 @@
   width: 600px;
   height: 300px;
   width: 100%;
+
+  @media (min-width: 700px) {
+    height: 371px;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  max-width: 1200px;
 }
 
 .swiper-slide {
@@ -17,6 +24,7 @@
 .swiper-button-next {
   right: 42px;
 }
+
 .swiper-button-prev {
   left: 42px;
 }

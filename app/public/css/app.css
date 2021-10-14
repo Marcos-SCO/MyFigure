@@ -7,11 +7,11 @@
 
 .logo {
   font-family: "Press Start 2P", cursive;
-  color: #f09d51;
+  color: #ee7c2f;
 }
 .logo a {
   text-decoration: none;
-  color: #f09d51;
+  color: #ee7c2f;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
 
 .navbar-center {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1238px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ body {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #f09d51;
+  background: #ee7c2f;
   padding: 0 5px;
   border-radius: 30%;
   color: #fff;
@@ -104,16 +104,16 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 1rem;
-  background: #f09d51;
+  background: #ee7c2f;
   color: #222;
-  border: 1px solid #f09d51;
+  border: 1px solid #ee7c2f;
   transition: all 0.3s linear;
   cursor: pointer;
 }
 
 .banner-btn:hover {
   background: transparent;
-  color: #f09d51;
+  color: #ee7c2f;
 }
 
 /* --------------- End of Hero ---------------- */
@@ -161,7 +161,7 @@ body {
   padding: 0.56rem;
   min-width: 23px;
   border-radius: 50%;
-  background-color: #f09d51;
+  background-color: #ee7c2f;
   color: #fff;
   text-align: center;
   font-size: 1.1rem;
@@ -182,7 +182,7 @@ body {
   position: absolute;
   top: 70%;
   right: 0;
-  background: #f09d51;
+  background: #ee7c2f;
   border: none;
   text-transform: uppercase;
   padding: 0.5rem 0.75rem;
@@ -233,7 +233,7 @@ body {
 .product .series {
   font-size: 0.85rem;
   display: inline-block;
-  color: #f09d51;
+  color: #ee7c2f;
   text-align: center;
   display: inline-block;
   width: 100%;
@@ -248,7 +248,7 @@ body {
 .product .price-container {
   margin-top: 0.4rem;
   letter-spacing: 0.1rem;
-  color: #f09d51;
+  color: #ee7c2f;
   text-align: center;
 }
 
@@ -388,7 +388,7 @@ body {
 
 .fa-chevron-up,
 .fa-chevron-down {
-  color: #f09d51;
+  color: #ee7c2f;
   cursor: pointer;
 }
 
@@ -410,6 +410,14 @@ body {
   width: 600px;
   height: 300px;
   width: 100%;
+  max-width: 1200px;
+}
+@media (min-width: 700px) {
+  .swiper {
+    height: 371px;
+    width: 100%;
+    margin-top: 3rem;
+  }
 }
 
 .swiper-slide {

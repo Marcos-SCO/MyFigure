@@ -18,8 +18,8 @@
 }
 
 body {
-  color: $mainBlack;
-  background: $mainWhite;
+  color: $black;
+  background: $white;
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
 }
@@ -43,7 +43,7 @@ body {
 
 .navbar-center {
   width: 100%;
-  max-width: 1170px;
+  max-width: 1238px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@ body {
   background: $primaryColor;
   padding: 0 5px;
   border-radius: 30%;
-  color: $mainWhite;
+  color: $white;
 }
 
 .cart-item {
@@ -108,7 +108,7 @@ body {
   letter-spacing: $mainSpacing;
   font-size: 1rem;
   background: $primaryColor;
-  color: $mainBlack;
+  color: $black;
   border: 1px solid $primaryColor;
   transition: $mainTransition;
   cursor: pointer;
@@ -163,7 +163,7 @@ body {
     min-width: 23px;
     border-radius: 50%;
     background-color: $primaryColor;
-    color: $mainWhite;
+    color: $white;
     text-align: center;
     font-size: 1.1rem;
     transition: $mainTransition;
@@ -196,11 +196,11 @@ body {
   transition: $mainTransition;
   transform: translateX(101%);
   cursor: pointer;
-  color: $mainWhite
+  color: $white
 }
 
 .img-container:hover {
-  color: $mainWhite;
+  color: $white;
 }
 
 .fa-shopping-cart {
