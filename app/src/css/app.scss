@@ -11,6 +11,7 @@
 .logo {
   font-family: 'Press Start 2P', cursive;
   color: $primaryColor;
+
   a {
     text-decoration: none;
     color: $primaryColor;
@@ -72,10 +73,6 @@ body {
   padding: 0 5px;
   border-radius: 30%;
   color: $white;
-}
-
-.cart-item {
-  min-width: 270px
 }
 
 /* --------------- End of Navbar ---------------- */
@@ -294,13 +291,19 @@ body {
   transform: translateX(100%);
   z-index: 99;
   transition: $cartTransition;
-}
 
-/* Hide scrollbar */
-.cart::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-  /* make scrollbar transparent */
+  @media screen and (min-width: 768px) {
+    // width: 30vw;
+    width: 40vw;
+    min-width: 450px;
+  }
+
+  /* Hide scrollbar */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
+  }
 }
 
 .showCart {
@@ -308,13 +311,6 @@ body {
   opacity: 1;
   right: 0;
   transform: translateX(0);
-}
-
-@media screen and (min-width: 768px) {
-  .cart {
-    width: 30vw;
-    min-width: 450px;
-  }
 }
 
 .close-cart {
@@ -348,6 +344,8 @@ body {
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
   width: 100%;
+  min-width: 270px;
+  justify-content: space-evenly;
 
   .price-display {
     min-width: 180px;

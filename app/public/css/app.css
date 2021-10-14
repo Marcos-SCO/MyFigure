@@ -71,10 +71,6 @@ body {
   color: #fff;
 }
 
-.cart-item {
-  min-width: 270px;
-}
-
 /* --------------- End of Navbar ---------------- */
 /* --------------- Hero ---------------- */
 .hero {
@@ -288,9 +284,14 @@ body {
   transform: translateX(100%);
   z-index: 99;
   transition: 0.35s ease-in-out;
+  /* Hide scrollbar */
 }
-
-/* Hide scrollbar */
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 40vw;
+    min-width: 450px;
+  }
+}
 .cart::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -304,12 +305,6 @@ body {
   transform: translateX(0);
 }
 
-@media screen and (min-width: 768px) {
-  .cart {
-    width: 30vw;
-    min-width: 450px;
-  }
-}
 .close-cart {
   font-size: 1.95rem;
   cursor: pointer;
@@ -341,6 +336,8 @@ body {
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
   width: 100%;
+  min-width: 270px;
+  justify-content: space-evenly;
 }
 .cart-item .price-display {
   min-width: 180px;
