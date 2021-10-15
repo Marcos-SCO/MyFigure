@@ -10,7 +10,7 @@ Front-end para E-commerce de Action Figures com carrinho de compras dinâmico.
 - Javascript
 - Json
 
-## Bibliotecas 📕
+## Bibliotecas 📘
 
 - Laravel Mix
 - WebPack
@@ -21,7 +21,7 @@ Front-end para E-commerce de Action Figures com carrinho de compras dinâmico.
 - Desenvolvimento de carrinho de compras que calcule valores individuais e totais.
 - Utilização de bibliotecas para auxílio no desenvolvimento
 
-<a href='https://marcos-sco.github.io/MyFigure/' target="_blank">Acesse por aqui</a>
+<a href='https://marcos-sco.github.io/MyFigure/'>Acesse por aqui</a>
 <p align="left">
   <a href='https://marcos-sco.github.io/MyFigure/'>
     <img src="https://marcos-sco.github.io/MyFigure/app/public/img/gif/myFigure.gif?raw=true" width="700" title="My figure">
