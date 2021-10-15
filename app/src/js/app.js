@@ -152,8 +152,8 @@ const UI = {
             <img src="${img}" alt="${title}">
             <div class='price-display'>
                 <h4>${title}</h4>
-                <h5>$<span class='price'>${price}<span></h5>
-                <small>$${price} X <span class="price-qty">${qty}</span></small>
+                <h5>R$ <span class='price'>${price}<span></h5>
+                <small>R$ ${price} X <span class="price-qty">${qty}</span></small>
                 <span class="remove-item" data-id="${id}">remover</span>
             </div>
             <div>
