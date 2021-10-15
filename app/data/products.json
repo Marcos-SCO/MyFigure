@@ -148,45 +148,45 @@
       "sys": { "id": "17" },
       "fields": {
         "title": "Junko Enoshima",
-        "series": "Dangaronpa",
+        "series": "Danganronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./app/public/img/dangarpaJunkoEnoshima.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/danganronpaJunkoEnoshima.png" } } }
       }
     },
     {
       "sys": { "id": "18" },
       "fields": {
         "title": "Nagito Komaeda",
-        "series": "Dangaronpa",
+        "series": "Danganronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./app/public/img/dangaronpaNagitoKomaeda.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/danganronpaNagitoKomaeda.png" } } }
       }
     },
     {
       "sys": { "id": "19" },
       "fields": {
         "title": "Hajime Hinata",
-        "series": "Dangaronpa",
+        "series": "Danganronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./app/public/img/dangaronpaHajimeHinata.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/danganronpaHajimeHinata.png" } } }
       }
     },
     {
       "sys": { "id": "20" },
       "fields": {
         "title": "Kioko Kirigiri",
-        "series": "Dangaronpa",
+        "series": "Danganronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./app/public/img/dangaronpaKiokoKirigiri.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/danganronpaKiokoKirigiri.png" } } }
       }
     },
     {
       "sys": { "id": "21" },
       "fields": {
         "title": "Kokichi Oma",
-        "series": "Dangaronpa",
+        "series": "Danganronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./app/public/img/dangaronpaKokichi.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/danganronpaKokichi.png" } } }
       }
     },
     {

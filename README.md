@@ -5,8 +5,16 @@ Front-end para E-commerce de Action Figures com carrinho de compras dinâmico.
 ## Tecnologias Utilizadas 🚀
 
 - HTML
-- CSS3
-- JAVASCRIPT
+- CSS
+- Sass
+- Javascript
+- Json
+
+## Bibliotecas 📕
+
+- Laravel Mix
+- WebPack
+- Swiper
 
 ## Objetivo 🎯
 
