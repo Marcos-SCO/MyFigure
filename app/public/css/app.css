@@ -7,11 +7,12 @@
 
 .logo {
   font-family: "Press Start 2P", cursive;
-  color: #ee7c2f;
+  border-left: 1rem solid #ed0000;
+  padding-left: 0.5rem;
 }
 .logo a {
   text-decoration: none;
-  color: #ee7c2f;
+  color: #2d2d2d;
 }
 
 body {
@@ -35,7 +36,8 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  background: #e7e2dd;
+  background-color: #fff;
+  box-shadow: 2px 9px 13px -6px rgba(189, 185, 185, 0.45);
   z-index: 99;
 }
 
@@ -65,7 +67,7 @@ body {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #ee7c2f;
+  background: #ed0000;
   padding: 0 5px;
   border-radius: 30%;
   color: #fff;
@@ -100,16 +102,15 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 1rem;
-  background: #ee7c2f;
-  color: #222;
-  border: 1px solid #ee7c2f;
-  transition: all 0.3s linear;
+  background: rgba(237, 0, 0, 0.75);
+  color: #fff;
+  border: 1px solid #ed0000;
   cursor: pointer;
 }
 
 .banner-btn:hover {
   background: transparent;
-  color: #ee7c2f;
+  color: #ed0000;
 }
 
 /* --------------- End of Hero ---------------- */
@@ -120,10 +121,14 @@ body {
 
 .section-title h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 5rem;
+  font-size: 2.1rem;
   text-transform: capitalize;
-  letter-spacing: 0.1rem;
+  font-family: "Press Start 2P", cursive;
+  max-width: 543px;
+  margin: 0 auto 5rem;
+  color: #2d2d2d;
+  border-left: 1rem solid #ed0000;
+  padding-left: 0.5rem;
 }
 
 .products-center {
@@ -157,7 +162,7 @@ body {
   padding: 0.56rem;
   min-width: 23px;
   border-radius: 50%;
-  background-color: #ee7c2f;
+  background-color: #ed0000;
   color: #fff;
   text-align: center;
   font-size: 1.1rem;
@@ -178,7 +183,7 @@ body {
   position: absolute;
   top: 70%;
   right: 0;
-  background: #ee7c2f;
+  background: #ed0000;
   border: none;
   text-transform: uppercase;
   padding: 0.5rem 0.75rem;
@@ -224,12 +229,12 @@ body {
   margin-top: 1rem;
   letter-spacing: 0.1rem;
   text-align: center;
+  color: #2d2d2d;
 }
 
 .product .series {
   font-size: 0.85rem;
   display: inline-block;
-  color: #ee7c2f;
   text-align: center;
   display: inline-block;
   width: 100%;
@@ -244,7 +249,7 @@ body {
 .product .price-container {
   margin-top: 0.4rem;
   letter-spacing: 0.1rem;
-  color: #ee7c2f;
+  color: #ed0000;
   text-align: center;
 }
 
@@ -257,7 +262,7 @@ body {
   width: 100%;
   height: 100%;
   transition: all 0.3s linear;
-  background: rgba(240, 157, 81, 0.5);
+  background-color: rgba(21, 21, 21, 0.3);
   z-index: 2;
   visibility: hidden;
   opacity: 0;
@@ -309,6 +314,9 @@ body {
   font-size: 1.95rem;
   cursor: pointer;
 }
+.close-cart i {
+  color: #ed0000;
+}
 .close-cart:hover {
   opacity: 0.8;
 }
@@ -322,11 +330,11 @@ body {
   position: relative;
   top: -1rem;
 }
-
-.cart h2 {
-  text-transform: capitalize;
-  letter-spacing: 0.1rem;
-  margin-bottom: 2rem;
+.cart-header .cart-title {
+  font-size: 1.5rem;
+  font-family: "Press Start 2P", cursive;
+  border-left: 1rem solid #ed0000;
+  padding-left: 0.5rem;
 }
 
 /*---------- Cart Item -------------------- */
@@ -385,7 +393,7 @@ body {
 
 .fa-chevron-up,
 .fa-chevron-down {
-  color: #ee7c2f;
+  color: #ed0000;
   cursor: pointer;
 }
 
@@ -404,14 +412,13 @@ body {
 /* --------------- End of Cart ---------------- */
 /* --------------- Swiper - start --------------- */
 .swiper {
-  width: 600px;
-  height: 300px;
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.45) 2px 9px 13px -6px;
   max-width: 1200px;
 }
-@media (min-width: 700px) {
+@media (min-width: 1215px) {
   .swiper {
-    height: 371px;
+    height: 350px;
     width: 100%;
     margin-top: 3rem;
   }

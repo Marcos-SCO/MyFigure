@@ -1,10 +1,9 @@
 .swiper {
-  width: 600px;
-  height: 300px;
   width: 100%;
+  box-shadow: rgb(0 0 0 / 45%) 2px 9px 13px -6px;
 
-  @media (min-width: 700px) {
-    height: 371px;
+  @media (min-width: 1215px) {
+    height: 350px;
     width: 100%;
     margin-top: 3rem;
   }
