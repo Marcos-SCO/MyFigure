@@ -835,9 +835,9 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar'
   },
-  // autoplay: {
-  //   // delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000
+  },
   keyboard: {
     enabled: true,
     onlyInViewport: false

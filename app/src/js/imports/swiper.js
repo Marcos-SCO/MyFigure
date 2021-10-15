@@ -27,9 +27,9 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-  // autoplay: {
-  //   // delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
   keyboard: {
     enabled: true,
     onlyInViewport: false,
