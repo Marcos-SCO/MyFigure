@@ -7,7 +7,7 @@
 
 .logo {
   font-family: "Press Start 2P", cursive;
-  border-left: 1rem solid #ed0000;
+  border-left: 1rem solid #cd255e;
   padding-left: 0.5rem;
 }
 .logo a {
@@ -67,7 +67,7 @@ body {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #ed0000;
+  background: #cd255e;
   padding: 0 5px;
   border-radius: 30%;
   color: #fff;
@@ -102,15 +102,15 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 1rem;
-  background: rgba(237, 0, 0, 0.75);
+  background: rgba(205, 37, 94, 0.75);
   color: #fff;
-  border: 1px solid #ed0000;
+  border: 1px solid #cd255e;
   cursor: pointer;
 }
 
 .banner-btn:hover {
   background: transparent;
-  color: #ed0000;
+  color: #cd255e;
 }
 
 /* --------------- End of Hero ---------------- */
@@ -127,7 +127,7 @@ body {
   max-width: 543px;
   margin: 0 auto 5rem;
   color: #2d2d2d;
-  border-left: 1rem solid #ed0000;
+  border-left: 1rem solid #cd255e;
   padding-left: 0.5rem;
 }
 
@@ -162,7 +162,7 @@ body {
   padding: 0.56rem;
   min-width: 23px;
   border-radius: 50%;
-  background-color: #ed0000;
+  background-color: #cd255e;
   color: #fff;
   text-align: center;
   font-size: 1.1rem;
@@ -183,7 +183,7 @@ body {
   position: absolute;
   top: 70%;
   right: 0;
-  background: #ed0000;
+  background: #cd255e;
   border: none;
   text-transform: uppercase;
   padding: 0.5rem 0.75rem;
@@ -249,7 +249,7 @@ body {
 .product .price-container {
   margin-top: 0.4rem;
   letter-spacing: 0.1rem;
-  color: #ed0000;
+  color: #cd255e;
   text-align: center;
 }
 
@@ -315,7 +315,7 @@ body {
   cursor: pointer;
 }
 .close-cart i {
-  color: #ed0000;
+  color: #cd255e;
 }
 .close-cart:hover {
   opacity: 0.8;
@@ -333,7 +333,7 @@ body {
 .cart-header .cart-title {
   font-size: 1.5rem;
   font-family: "Press Start 2P", cursive;
-  border-left: 1rem solid #ed0000;
+  border-left: 1rem solid #cd255e;
   padding-left: 0.5rem;
 }
 
@@ -393,7 +393,7 @@ body {
 
 .fa-chevron-up,
 .fa-chevron-down {
-  color: #ed0000;
+  color: #cd255e;
   cursor: pointer;
 }
 
@@ -423,6 +423,10 @@ body {
     margin-top: 3rem;
   }
 }
+.swiper:hover .swiper-btn {
+  visibility: visible;
+  opacity: 0.9;
+}
 
 .swiper-slide {
   background-position: center;
@@ -434,12 +438,34 @@ body {
   width: 100%;
 }
 
+.swiper-btn {
+  color: #fff !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+
 .swiper-button-next {
-  right: 42px;
+  right: 50px !important;
+}
+.swiper-button-next:hover {
+  right: 42px !important;
 }
 
 .swiper-button-prev {
-  left: 42px;
+  left: 50px !important;
+}
+.swiper-button-prev:hover {
+  left: 42px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  opacity: 0.75 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #cd255e !important;
 }
 
 /* --------------- Swiper - end ---------------- */
