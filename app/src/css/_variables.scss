@@ -11,5 +11,8 @@ $hoverOpacity: .8;
 
 @mixin mainBorderTitle {
   border-left: 1rem solid $primaryColor;
+  @media (max-width:310px) {
+    border-left: .1rem;
+  }
   padding-left: 0.5rem;
 }

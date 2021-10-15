@@ -29,33 +29,41 @@
 }
 
 .swiper-btn {
-  color: $white!important;
+  color: $white !important;
   opacity: 0;
   visibility: hidden;
   transition: $mainTransition;
 }
 
 .swiper-button-next {
-  right: 50px!important;
+  right: 50px !important;
 
   &:hover {
-    right: 42px!important;
+    right: 42px !important;
   }
 }
 
 .swiper-button-prev {
-  left: 50px!important;
+  left: 50px !important;
 
   &:hover {
-    left: 42px!important;
+    left: 42px !important;
   }
 }
 
 .swiper-pagination-bullet {
-  background-color: $white!important;
-  opacity: .75!important;
+  background-color: $white !important;
+  opacity: .75 !important;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: $primaryColor!important;
+  background-color: $primaryColor !important;
+}
+
+@media (max-width:500px) {
+
+  .swiper-btn,
+  .swiper-pagination-bullet {
+    opacity: 0 !important;
+  }
 }

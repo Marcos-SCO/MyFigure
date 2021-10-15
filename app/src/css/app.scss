@@ -1,4 +1,5 @@
 @import './variables';
+@import './reset';
 @import './fonts';
 @import './flex';
 
@@ -11,6 +12,10 @@
 .logo {
   font-family: 'Press Start 2P', cursive;
   @include mainBorderTitle;
+  margin-right: .2rem;
+  @media (max-width: 450px) {
+    font-size: calc(1rem + 1vw);
+  }
 
   a {
     text-decoration: none;

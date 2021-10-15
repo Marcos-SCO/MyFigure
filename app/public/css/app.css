@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap);
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,6 +15,17 @@
   font-family: "Press Start 2P", cursive;
   border-left: 1rem solid #cd255e;
   padding-left: 0.5rem;
+  margin-right: 0.2rem;
+}
+@media (max-width: 310px) {
+  .logo {
+    border-left: 0.1rem;
+  }
+}
+@media (max-width: 450px) {
+  .logo {
+    font-size: calc(1rem + 1vw);
+  }
 }
 .logo a {
   text-decoration: none;
@@ -129,6 +146,11 @@ body {
   color: #2d2d2d;
   border-left: 1rem solid #cd255e;
   padding-left: 0.5rem;
+}
+@media (max-width: 310px) {
+  .section-title h2 {
+    border-left: 0.1rem;
+  }
 }
 
 .products-center {
@@ -336,6 +358,11 @@ body {
   border-left: 1rem solid #cd255e;
   padding-left: 0.5rem;
 }
+@media (max-width: 310px) {
+  .cart-header .cart-title {
+    border-left: 0.1rem;
+  }
+}
 
 /*---------- Cart Item -------------------- */
 .cart-item {
@@ -468,4 +495,10 @@ body {
   background-color: #cd255e !important;
 }
 
+@media (max-width: 500px) {
+  .swiper-btn,
+.swiper-pagination-bullet {
+    opacity: 0 !important;
+  }
+}
 /* --------------- Swiper - end ---------------- */
