@@ -6,7 +6,7 @@
         "title": "Goku SSJ",
         "series": "Dragon Ball",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/dragonBallGokuSuperSeyan.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/dragonBallGokuSuperSeyan.png" } } }
       }
     },
     {
@@ -15,7 +15,7 @@
         "title": "Vegeta",
         "series": "Dragon Ball",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/dragonBallVegeta.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/dragonBallVegeta.png" } } }
       }
     },
     {
@@ -24,7 +24,7 @@
         "title": "Majin Boo",
         "series": "Dragon Ball",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/dragonBallMajinboo.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/dragonBallMajinboo.png" } } }
       }
     },
     {
@@ -33,7 +33,7 @@
         "title": "Light & Ryuki",
         "series": "Death Note",
         "price": 32.99,
-        "img": { "fields": { "file": { "url": "./public/img/deathNoteLightRyuki.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/deathNoteLightRyuki.png" } } }
       }
     },
     {
@@ -42,7 +42,7 @@
         "title": "Dark Magician",
         "series": "Yu-Gi-Oh!",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/yugiohDarkMagician.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/yugiohDarkMagician.png" } } }
       }
     },
     {
@@ -51,7 +51,7 @@
         "title": "Yugi Muto",
         "series": "Yu-Gi-Oh!",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/yugiohYugiMuto.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/yugiohYugiMuto.png" } } }
       }
     },
     {
@@ -60,7 +60,7 @@
         "title": "Monkey D. Ruffy",
         "series": "One Piece",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/onePieceMokeyDRuffy.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/onePieceMokeyDRuffy.png" } } }
       }
     },
     {
@@ -69,7 +69,7 @@
         "title": "Roronoa Zoro",
         "series": "One Piece",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/onePieceRoronoaZoro.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/onePieceRoronoaZoro.png" } } }
       }
     },
     {
@@ -78,7 +78,7 @@
         "title": "Zero Thumb's Up",
         "series": "Megaman X",
         "price": 10.99,
-        "img": { "fields": { "file": { "url": "./public/img/megamanZeroThumbUp.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/megamanZeroThumbUp.png" } } }
       }
     },
     {
@@ -87,7 +87,7 @@
         "title": "Megaman X - Mega Buster",
         "series": "Megaman X",
         "price": 12.99,
-        "img": { "fields": { "file": { "url": "./public/img/megamanXMegaBuster.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/megamanXMegaBuster.png" } } }
       }
     },
     {
@@ -96,7 +96,7 @@
         "title": "Megaman X - Front stand",
         "series": "Megaman X",
         "price": 12.99,
-        "img": { "fields": { "file": { "url": "./public/img/megamanXStanding.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/megamanXStanding.png" } } }
       }
     },
     {
@@ -105,7 +105,7 @@
         "title": "Zero Sword",
         "series": "Megaman X",
         "price": 22.99,
-        "img": { "fields": { "file": { "url": "./public/img/megamanZeroSword.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/megamanZeroSword.png" } } }
       }
     },
     {
@@ -114,7 +114,7 @@
         "title": "Ryu - Street Fighter",
         "series": "Street Fighter",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/streetFighterRyu.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/streetFighterRyu.png" } } }
       }
     },
     {
@@ -123,7 +123,7 @@
         "title": "Raiden",
         "series": "Mortal Kombat X",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/mortalKombatRaiden.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/mortalKombatRaiden.png" } } }
       }
     },
     {
@@ -132,7 +132,7 @@
         "title": "Scorpion",
         "series": "Mortal Kombat X",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/mortalKombatScorpion.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/mortalKombatScorpion.png" } } }
       }
     },
     {
@@ -141,7 +141,7 @@
         "title": "Sub-Zero",
         "series": "Mortal Kombat X",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/mortalKombatSubZero.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/mortalKombatSubZero.png" } } }
       }
     },
     {
@@ -150,7 +150,7 @@
         "title": "Junko Enoshima",
         "series": "Dangaronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/dangarpaJunkoEnoshima.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/dangarpaJunkoEnoshima.png" } } }
       }
     },
     {
@@ -159,7 +159,7 @@
         "title": "Nagito Komaeda",
         "series": "Dangaronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/dangaronpaNagitoKomaeda.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/dangaronpaNagitoKomaeda.png" } } }
       }
     },
     {
@@ -168,7 +168,7 @@
         "title": "Hajime Hinata",
         "series": "Dangaronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/dangaronpaHajimeHinata.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/dangaronpaHajimeHinata.png" } } }
       }
     },
     {
@@ -177,7 +177,7 @@
         "title": "Kioko Kirigiri",
         "series": "Dangaronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/dangaronpaKiokoKirigiri.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/dangaronpaKiokoKirigiri.png" } } }
       }
     },
     {
@@ -186,7 +186,7 @@
         "title": "Kokichi Oma",
         "series": "Dangaronpa",
         "price": 45.99,
-        "img": { "fields": { "file": { "url": "./public/img/dangaronpaKokichi.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/dangaronpaKokichi.png" } } }
       }
     },
     {
@@ -195,7 +195,7 @@
         "title": "Pheonix Wright",
         "series": "Ace Attorney",
         "price": 88.99,
-        "img": { "fields": { "file": { "url": "./public/img/aceAttorneyPheonix.png" } } }
+        "img": { "fields": { "file": { "url": "./app/public/img/aceAttorneyPheonix.png" } } }
       }
     }
   ]

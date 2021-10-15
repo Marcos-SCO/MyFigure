@@ -20,7 +20,7 @@ let cart = [];
 function Products() {
     this.getCart = async function getCart() {
         try {
-            let result = await fetch('./data/products.json');
+            let result = await fetch('./app/data/products.json');
             let data = await result.json();
             let products = data.items;
             products = products.map(product => {

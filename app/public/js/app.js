@@ -87,7 +87,7 @@ function Products() {
             case 0:
               _context.prev = 0;
               _context.next = 3;
-              return fetch('./data/products.json');
+              return fetch('./app/data/products.json');
 
             case 3:
               result = _context.sent;
