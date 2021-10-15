@@ -18,12 +18,13 @@ Front-end para E-commerce de Action Figures com carrinho de compras dinâmico.
 
 ## Objetivo 🎯
 
-Fazer requisições para uma api, pegar os dados e mostrar para o usuário.
+- Desenvolvimento de carrinho de compras que calcule valores individuais e totais.
+- Utilização de bibliotecas para auxílio no desenvolvimento
 
-<a href='https://marcos-sco.github.io/pixabay-api/'>Acesse por aqui</a>
+<a href='https://marcos-sco.github.io/MyFigure/'>Acesse por aqui</a>
 <p align="left">
-  <a href='https://marcos-sco.github.io/pixabay-api/'>
-    <img src="https://github.com/Marcos-SCO/pixabay-api/blob/master/img/gallery.png?raw=true" width="700" title="batman">
+  <a href='https://marcos-sco.github.io/MyFigure/'>
+    <img src="https://marcos-sco.github.io/MyFigure/app/public/img/gif/myFigure.gif?raw=true" width="700" title="My figure">
   </a>
 </p>
 
