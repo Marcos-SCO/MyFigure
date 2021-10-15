@@ -14,6 +14,7 @@
   font-family: 'Press Start 2P', cursive;
   @include mainBorderTitle;
   margin-right: .2rem;
+
   @media (max-width: 450px) {
     font-size: calc(1rem + 1vw);
   }
@@ -418,11 +419,16 @@ body {
 
 .item-amount {
   text-align: center;
+  margin: .5rem 0;
 }
 
 .remove-item {
   color: grey;
   cursor: pointer;
+}
+
+.btn-controls-container {
+  text-align: center
 }
 
 .fa-chevron-up,

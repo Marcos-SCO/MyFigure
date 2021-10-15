@@ -156,7 +156,7 @@ const UI = {
                 <small>R$ ${price} X <span class="price-qty">${qty}</span></small>
                 <span class="remove-item" data-id="${id}">remover</span>
             </div>
-            <div>
+            <div class='btn-controls-container'>
                 <i class="arrow-btn fas fa-chevron-up" data-id="${id}"></i>
                 <p class="item-amount price-item-${id}">${qty}</p>
                 <i class="arrow-btn fas fa-chevron-down" data-id="${id}"></i>
