@@ -18,7 +18,7 @@ Front-end para E-commerce de Action Figures com carrinho de compras dinâmico.
 
 ## Objetivo 🎯
 
-- Desenvolvimento de carrinho de compras que calcule valores individuais e totais.
+- Carrinho de compras que calcule valores individuais e totais.
 - Utilização de bibliotecas para auxílio no desenvolvimento
 
 <a href='https://marcos-sco.github.io/MyFigure/'>Acesse por aqui</a>
