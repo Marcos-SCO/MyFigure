@@ -111,7 +111,7 @@
     {
       "sys": { "id": "13" },
       "fields": {
-        "title": "Ryu - Street Fighter",
+        "title": "Ryu",
         "series": "Street Fighter",
         "price": 45.99,
         "img": { "fields": { "file": { "url": "./app/public/img/streetFighterRyu.png" } } }
