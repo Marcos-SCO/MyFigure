@@ -373,7 +373,7 @@ body {
   // display: grid;
   // grid-template-columns: auto 1fr auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
   width: 100%;
