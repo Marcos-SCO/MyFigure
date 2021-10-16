@@ -75,7 +75,7 @@
     {
       "sys": { "id": "9" },
       "fields": {
-        "title": "Zero Thumb's Up",
+        "title": "Zero Thumbs Up",
         "series": "Megaman X",
         "price": 10.99,
         "img": { "fields": { "file": { "url": "./app/public/img/megamanZeroThumbUp.png" } } }
