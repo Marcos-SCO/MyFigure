@@ -1,38 +1,41 @@
 # MyFigure
 
-Front-end para E-commerce de Action Figures com carrinho de compras dinâmico.
+A dynamic front-end for an Action Figure E-commerce platform, featuring a real-time shopping cart and interactive product browsing.
 
-## Tecnologias Utilizadas 🚀
+## Project Description
 
-- HTML
-- CSS
+MyFigure is a web application that allows users to browse and purchase action figures. The platform includes a dynamic shopping cart that calculates individual and total prices in real time. The project demonstrates the use of modern front-end technologies and libraries to create an engaging e-commerce experience.
+
+## Technologies Used 🚀
+
+- Html
+- Css
 - Sass
-- Javascript
-- Json
+- JavaScript
+- JSON
 
-## Bibliotecas 📘
+## Features 🎯
 
-- Laravel Mix
-- WebPack
-- Swiper
+- Dynamic shopping cart with real-time calculation of item and total prices.
+- Interactive product carousel using Swiper.
+- Modular and maintainable codebase using modern build tools.
+- Responsive design for various devices.
 
-## Objetivo 🎯
+## Live Demo
 
-- Carrinho de compras que calcule valores individuais e totais.
-- Utilização de bibliotecas para auxílio no desenvolvimento
+[Access the live project here](https://marcos-sco.github.io/MyFigure/)
 
-<a href='https://marcos-sco.github.io/MyFigure/'>Acesse por aqui</a>
 <p align="left">
   <a href='https://marcos-sco.github.io/MyFigure/'>
-    <img src="https://marcos-sco.github.io/MyFigure/app/public/img/gif/myFigure.gif?raw=true" width="700" title="My figure">
+    <img src="https://marcos-sco.github.io/MyFigure/app/public/img/gif/myFigure.gif?raw=true" width="700" title="MyFigure Demo">
   </a>
 </p>
 
-## Outros Projetos 💻
+## Other Projects 💻
 
 - [gordao110porcento](https://github.com/Marcos-SCO/gordao110porcento)
 - [marvel-vs-capcom-select-screen](https://github.com/Marcos-SCO/Marvel-vs-Capcom-select-select-screen)
 
-## Redes Sociais 😃
+## Social Media 😃
 
-- [Linkedin](https://www.linkedin.com/in/marcos-sco/)
+- [LinkedIn](https://www.linkedin.com/in/marcos-sco/)
